@@ -1,1 +1,1 @@
-# simplify_Skin_detect
+# Vedic_Skin_detect
