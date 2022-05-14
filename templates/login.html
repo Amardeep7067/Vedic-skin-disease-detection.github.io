@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vedic</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/bootstrap/bootstrap.min.css') }}">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/themify-icons/themify-icons.css') }}">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/slick/slick.css') }}">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/Venobox/venobox.css') }}">
+  <!-- aos -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/aos/aos.css') }}">
+
+  <!-- Main Stylesheet -->
+  <link href="{{ url_for('static',filename='assets/css/style.css') }}" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		.user_card {
+			width: 400px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #D4E4EE;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 30px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+
+		.form_container {
+			margin-top: 20px;
+		}
+
+		#form-title{
+			color: rgb(68, 52, 52);
+		}
+		.login_btn {
+			width: 100%;
+			background: #5a6163 !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #f7ba5b !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+
+	</style>
+
+
+</head>
+
+<body>
+  
+
+<!-- navigation -->
+<section class="fixed-top navigation">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="logo"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- navbar -->
+      <div class="collapse navbar-collapse text-center" id="navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('index')}}">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('skinguide')}}">Skin-Guide</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('index', _anchor='contactus')}}">Contact</a>
+          </li>
+          <li class="nav-item">
+            <div id="google_element"></div>
+             <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate" ></script>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+<!-- /navigation -->
+<!-- /navigation -->
+<!-- background shapes -->
+<!-- background shapes -->
+  <img class="img-fluid hero-bg-1 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/feature-bg-2.png') }}" alt="">
+  <img class="img-fluid hero-bg-2 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-ball-1.png') }}" alt="">
+  <img class="img-fluid hero-bg-3 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-half-cycle.png') }}" alt="">
+  <img class="img-fluid hero-bg-4 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/green-dot.png') }}"  alt="">
+  <img class="img-fluid hero-bg-5 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/blue-half-cycle.png') }}" alt="">
+  <img class="img-fluid hero-bg-6 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-ball-1.png') }}" alt="">
+
+<div class="container h-100">
+  <div class="d-flex justify-content-center h-100">
+    <div class="user_card">
+      <div class="d-flex justify-content-center">
+        <h3 id="form-title">Login</h3>
+      </div>
+      <div class="d-flex justify-content-center form_container">
+        <form method="POST" id='login' >
+        <label for="chk" aria-hidden="true">Email: &emsp;&nbsp;</label>
+        <input type="email" name="name" placeholder="email" required="">
+        <br>
+        <label for="chk" aria-hidden="true">Password:</label>
+        <input type="Password" name="pass" placeholder="Password" required="">
+        <br>
+        <button class="login_btn" name="id" value="login">Login</button>
+        <br>
+        <button class="login_btn" name="id" value="forgot">Forgot password?</button>
+        
+        <div style="text-align: center;">{% if us %}
+             {{us}}
+        {% endif%}</div>
+      </form>
+     
+      </div>
+    
+      <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+          Don't have an account? <a href="{{url_for('signup')}}" class="ml-2">Sign Up</a>
+        </div>
+         <div>Note: If you forgot password enter email for reset link</div>
+    
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- jQuery -->
+
+<script src="{{ url_for('static',filename='assets/plugins/jQuery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/slick/slick.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/Venobox/venobox.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/aos/aos.js') }}"></script>
+
+<!-- Main Script -->
+<script src="{{ url_for('static',filename='assets/js/script.js') }}"></script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

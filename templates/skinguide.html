@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vedic</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+   <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/bootstrap/bootstrap.min.css') }}">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/themify-icons/themify-icons.css') }}">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/slick/slick.css') }}">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/Venobox/venobox.css') }}">
+  <!-- aos -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/aos/aos.css') }}">
+
+  <!-- Main Stylesheet -->
+  <link href="{{ url_for('static',filename='assets/css/style.css') }}" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}" type="image/x-icon">
+
+<style>
+  .login_btn {
+			width: auto;
+			background: #5a6163 !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+</style>
+</head>
+
+<body>
+  
+<!-- navigation -->
+<section class="fixed-top navigation">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="logo"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- navbar -->
+      <div class="collapse navbar-collapse text-center" id="navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('index')}}">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('skinguide')}}">Skin-Guide</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('index', _anchor='contactus')}}">Contact</a>
+          </li>
+          <li class="nav-item">
+            <div id="google_element"></div>
+             <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate" ></script>
+          </li>
+          
+        </ul>
+        <a href="{{url_for('login')}}" class="btn btn-primary ml-lg-3 primary-shadow">Login</a>
+      </div>
+    </nav>
+  </div>
+</section>
+<!-- /navigation -->
+
+<!-- service -->
+<section class="section-lg service-bg-image position-relative" style="background-image: url(images/backgrounds/service-page.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="section-title">Your guide to skin health.</h2>
+                <p class="mb-100">Find information regarding skin conditions, including symptoms, causes, diagnosis, and treatment options.</p>
+            </div>
+            <!-- service item -->
+            <div class="col-sm-6 mb-4">
+                <div class="rounded bg-white p-4 shadow-primary">
+                    <i class="ti-layers-alt round-icon blue mb-4"></i>
+                    <h4>Acne & Rosacea</h4>
+                   
+                  <p>Acne, one of the most common skin diseases, affects approximately 85% of the adolescent population, and occurs most prominently at skin sites with a high density of sebaceous glands such as the face, back, and chest. Although often considered a disease of teenagers, acne is occurring at an increasingly early age. Rosacea is a chronic facial inflammatory dermatosis characterized by flushing (or transient facial erythema), persistent central facial erythema, inflammatory papules/pustules, and telangiectasia. Both acne and rosacea have a multifactorial pathology</p>  
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/28150107/"><button class='btn login_btn'>Read More</button></a>
+                </div>
+            </div>
+            <!-- service item -->
+            <div class="col-sm-6 mb-4 translate-y-150">
+                <div class="rounded bg-white p-4 shadow-primary">
+                    <i class="ti-layers-alt round-icon green mb-4"></i>
+                    <h4>Molluscum contagiosum and warts
+                    </h4>
+                    <p>Molluscum contagiosum and warts are benign epidermal eruptions resulting from viral infections of the skin. Molluscum contagiosum eruptions are usually self-limited and without sequelae, although they can be more extensive in immunocompromised persons. Spontaneous disappearance of lesions is the norm, but treatment by local destruction (curettage, cryotherapy, or trichloroacetic acid) or immunologic modulation can shorten the disease course, possibly reducing autoinoculation and transmission. Warts result from a hyperkeratotic reaction to human papillomavirus infection; nongenital warts are classified as common, periungual, flat, filiform, or plantar, based on location and shape.</p>
+                    <a href="https://www.aafp.org/afp/2003/0315/p1233.html"><button class='btn login_btn'>Read More</button></a>   
+                  </div>
+            </div>
+            <!-- service item -->
+            <div class="col-sm-6 mb-4">
+                <div class="rounded bg-white p-4 shadow-primary">
+                    <i class="ti-layers-alt round-icon orange mb-4"></i>
+                    <a href="https://www.cancer.org/cancer/melanoma-skin-cancer.html"><h4>Melanoma
+                    </h4></a>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.<br><br>There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/28150107/"><button class='btn login_btn'>Read More</button></a>
+                  </div>
+            </div>
+            <!-- service item -->
+            <div class="col-sm-6 mb-4 translate-y-150">
+                <div class="rounded bg-white p-4 shadow-primary">
+                    <i class="ti-layers-alt round-icon blue mb-4"></i>
+                   <h4>Vascular Tumor</h4>
+                    <p>A vascular tumor is a tumor of vascular origin; a soft tissue growth that can be either benign or malignant, formed from blood vessels or lymph vessels.[1] Examples of vascular tumors include hemangiomas, lymphangiomas, hemangioendotheliomas, Kaposi's sarcomas, angiosarcomas, and hemangioblastomas. An angioma refers to any type of benign vascular tumor.</p></div>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4078200/"> <button class='btn login_btn'>Read More</button></a>
+                  </div>
+            <!-- service item -->
+            <div class="col-sm-6 mb-4">
+                <div class="rounded bg-white p-4 shadow-primary">
+                    <i class="ti-layers-alt round-icon green mb-4"></i>
+                    <h4>Eczema</h4>
+                  <p>Eczema is a group of conditions that make your skin inflamed or irritated. The most common type is atopic dermatitis or atopic eczema. “Atopic” refers to a person’s tendency to get allergic conditions such as asthma and hay fever.
+
+                    Eczema affects about 10% to 20% of infants and about 3% of adults and children in the U.S. Most children outgrow it by their 10th birthday. Some people continue to have symptoms on and off for life.</p></div>
+                    <a href="https://medlineplus.gov/eczema.html"><button class='btn login_btn'>Read More</button></a>
+                  </div>
+            <!-- service item -->
+            <div class="col-sm-6 mb-4 translate-y-150">
+                <div class="rounded bg-white p-4 shadow-primary">
+                    <i class="ti-layers-alt round-icon orange mb-4"></i>
+                    <h4>Bullous
+                    </h4>
+                    <p>Bullous is the medical term for a large blister (a thin-walled sac filled with clear fluid). Usually the skin in BP is very itchy and large, red welts and hives may appear before or during the formation of blisters. The blisters are widespread and usually appear on the areas of the body that flex or move (flexural areas). About 15-20 percent of people with BP also develop blisters in the mouth or down the throat in the esophagus.</p>  </div>
+                    <a href="https://www.mayoclinic.org/diseases-conditions/bullous-pemphigoid/symptoms-causes/syc-20350414"><button class='btn login_btn'>Read More</button></a>
+                  </div>
+               <!-- service item -->
+               <div class="col-sm-6 mb-4">
+                <div class="rounded bg-white p-4 shadow-primary">
+                    <i class="ti-layers-alt round-icon green mb-4"></i>
+                    <h4>Psoriasis and lichen </h4>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.<br><br>There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/2533568/"><button class='btn login_btn'>Read More</button></a>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- background shapes -->
+
+    <img class="img-fluid hero-bg-1 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/feature-bg-2.png') }}" alt="">
+    <img class="img-fluid hero-bg-2 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-ball-1.png') }}" alt="">
+    <img class="img-fluid hero-bg-3 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-half-cycle.png') }}" alt="">
+    <img class="img-fluid hero-bg-4 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/green-dot.png') }}"  alt="">
+    <img class="img-fluid hero-bg-5 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/blue-half-cycle.png') }}" alt="">
+    <img class="img-fluid hero-bg-6 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-ball-1.png') }}" alt="">
+</section>
+<!-- /service -->
+
+<!-- footer -->
+<footer class="footer-section footer pt-2 mt-3 pb-2" style="background-color:rgb(88, 95, 93)"">
+  <div class="container text-center" style="color: aliceblue;">
+          @Vedic2022
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+
+<script src="{{ url_for('static',filename='assets/plugins/jQuery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/slick/slick.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/Venobox/venobox.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/aos/aos.js') }}"></script>
+
+<!-- Main Script -->
+<script src="{{ url_for('static',filename='assets/js/script.js') }}"></script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+</html>

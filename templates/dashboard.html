@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vedic</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!--CSS Stylesheets-->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/w3.css') }}">
+  <link rel="stylesheet"  href="{{ url_for('static',filename='assets/css/skin.css') }}">
+
+  <!--Link to Font Awesome icons-->
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
+  <!--Link to fonts from google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+
+ 
+
+    <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/bootstrap/bootstrap.min.css') }}">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/themify-icons/themify-icons.css') }}">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/slick/slick.css') }}">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/Venobox/venobox.css') }}">
+  <!-- aos -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/aos/aos.css') }}">
+
+  <!-- Main Stylesheet -->
+  <link href="{{ url_for('static',filename='assets/css/style.css') }}" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  
+
+  
+ 
+    <style>
+    
+
+      .title{
+          font-weight: 700;
+          letter-spacing: 0.1px;
+          word-spacing: 0.1px;
+          color: #fcfcfc;
+      }
+     
+      #brand{
+          font-weight: 700;
+      }
+
+      #detect{
+          font-weight: 700;
+          color: #fcfcfc;
+      }
+
+      body{
+          background: url(Images/background.png) no-repeat fixed center;
+          background-size: cover;
+          height: 100%;
+          width: 100%;
+              
+      }
+      .yellow{
+          color: #d38c09;
+      }
+      .red{
+          color: rgb(156, 34, 61);
+      }
+      .orange{
+          color:rgb(230, 105, 3);
+      }
+      
+
+      p{
+          font-size: 1.2em;
+          font-weight: 400;
+          color: #fcfcfc;
+      }
+      #main{
+          margin-top: 40px;
+      }
+      @media (min-width: 992px) {
+          #main{
+              margin-top: 60px;
+          }
+      }
+
+      .card{
+          border: none;
+          background-color: rgb(0, 0, 0, 0.7);
+          border-radius: 12px;
+      }
+    </style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".box").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".box").hide();
+            }
+        });
+    }).change();
+});
+</script>
+</head>
+
+<body>
+
+  <!-- navigation -->
+<section class=" navigation" >
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="logo"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- navbar -->
+      <div class="collapse navbar-collapse text-center" id="navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('index')}}">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('skinguide')}}">Skin-Guide</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('index', _anchor='contactus')}}">Contact</a>
+          </li>
+          <li class="nav-item">
+            <div id="google_element"></div>
+             <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate" ></script>
+          </li>
+          
+        </ul>
+        <a onclick="myFunction()" href="{{url_for('logout')}}" class="btn btn-primary ml-lg-3 primary-shadow">logout</a>
+      </div>
+      
+    </nav>
+  </div>
+</section>
+<!-- /navigation -->
+
+<!-- background shapes -->
+
+  <img class="img-fluid hero-bg-1 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/feature-bg-2.png') }}" alt="">
+  <img class="img-fluid hero-bg-2 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-ball-1.png') }}" alt="">
+  <img class="img-fluid hero-bg-3 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-half-cycle.png') }}" alt="">
+  <img class="img-fluid hero-bg-4 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/green-dot.png') }}"  alt="">
+  <img class="img-fluid hero-bg-5 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/blue-half-cycle.png') }}" alt="">
+  <img class="img-fluid hero-bg-6 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-ball-1.png') }}" alt="">
+
+
+  
+  
+    <div class="container" id="main">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+                <div class="card m-4">
+                    <div class="card-body" id="box-cont" style="text-align: center;">
+                        <h3 class="card-title py-3 title" id="detect">Skin Disease Prediction
+                        </h3>
+                        <div>
+                          <select>
+                           
+                              <option>Choose Input Option</option>
+                              <option value="red">Webcam</option>
+                              <option value="green">Upload Image</option>
+                              
+                          </select>
+                          <br><br>
+                      </div>
+                        <div class="red box" id="red">
+                          
+                          <label for="webcam" class="ps-3 pt-3 pb-3" style="color: #fcfcfc">USE WEBCAM:</label>
+                            <button id="webcam" type="button" class="btn  ms-3"
+                                onclick="useWebcam()">Start
+                                webcam
+                            </button>
+                        
+                          
+                         
+                            <div id="webcam-container" class="px-3"></div>
+                            <div id="label-container" class="px-3 pt-3" style="color: #fcfcfc;"></div>
+
+
+                        </div>
+                        
+                        
+                       <div class="green box" id="green">
+                        
+                        <input id="imageUpload" class="form-control" type="file" /><br>
+                        <img id="imagePreview" style="height: 300px;" /><br><br>
+                        <div id="im-container" style="color: #fff;"></div>
+                       </div>
+                      
+                    </div>
+                </div>
+              
+                <br><br>
+                <h2 class="section-title pb-0 mb-0">Dermatologists near you</h2>
+                <hr>
+                <div class="d-flex justify-content-center">
+                  <a href="http://www.google.com/maps/search/skin+hospitals+near+me"><button class="btn btn-info">Click here</button></a>
+           
+                </div>
+
+                
+                </div>
+        </div>
+    </div>
+    </div>
+    <br><br>
+  <!-- footer -->
+<footer class="footer-section footer pt-2 mt-3 pb-2" style="background-color:rgb(88, 95, 93);position: fixed;left: 0; bottom: 0;width: 100%;">
+<!-- /footer -->
+
+
+
+<script src=https://unpkg.com/parse/dist/parse.min.js></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ url_for('static',filename='assets/js/new.js') }}"></script>
+
+<!-- jQuery -->
+
+<script src="{{ url_for('static',filename='assets/plugins/jQuery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/slick/slick.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/Venobox/venobox.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/aos/aos.js') }}"></script>
+   
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<!-- Main Script -->
+<script src="https://unpkg.com/parse@3.4.1/dist/parse.min.js"></script>
+<script src="{{ url_for('static',filename='assets/js/script.js') }}"></script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+	
+	<!-- Load TensorFlow.js
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.6.0/dist/tf.min.js"> 
+	</script>-->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> 
+	</script>
+	
+	
+
+	
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.3/dist/teachablemachine-image.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=OUR_GA_ID"></script>
+
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script> 
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'OUR_GA_ID', {cookie_flags: 'SameSite=None;Secure'});
+</script>
+<script>
+  function myFunction() {
+alert("You have successfully logged out");
+} 
+</script>
+
+</body>
+</html>

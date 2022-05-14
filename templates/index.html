@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vedic</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/bootstrap/bootstrap.min.css')}}">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/themify-icons/themify-icons.css') }}">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/slick/slick.css') }}">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/Venobox/venobox.css') }}">
+  <!-- aos -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/aos/aos.css') }}">
+
+  <!-- Main Stylesheet -->
+  <link href="{{ url_for('static',filename='assets/css/style.css') }}" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static',filename='assets/images/favicon.ico') }}" type="image/x-icon">
+
+
+</head>
+
+<body>
+  
+
+<!-- navigation -->
+<section class="fixed-top navigation">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="logo"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- navbar -->
+      <div class="collapse navbar-collapse text-center" id="navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('index')}}">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('skinguide')}}">Skin-Guide</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactus" >Contact</a>
+          </li>
+          <li class="nav-item">
+            <div id="google_element"></div>
+             <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate" ></script>
+          </li>
+          
+        </ul>
+        <a href="{{url_for('login')}}" class="btn btn-primary ml-lg-3 primary-shadow">Login</a>
+      </div>
+    </nav>
+  </div>
+</section>
+<!-- /navigation -->
+
+<!-- hero area -->
+<section class="hero-section hero mb-2" data-background="" style="background-image: url('static/assets/images/hero-area/banner-bg.png')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center zindex-1">
+        <h1 class="mb-3">Identify your skin problem in a snap.
+         <br>
+         Get results instantly.</h1>
+        <p class="mb-4">Why try to figure out what your skin problem is on your own?<br> Take control with the quickest, smartest way 
+          to identify your condition and learn whether you need medical treatment.</p>
+        <a href="#" class="btn btn-secondary btn-lg">explore us</a>
+        
+      </div>
+    </div>
+  </div>
+  <!-- background shapes -->
+  <div id="scene">
+    <img class="img-fluid hero-bg-1 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/feature-bg-2.png') }}" alt="">
+    <img class="img-fluid hero-bg-2 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-ball-1.png') }}" alt="">
+    <img class="img-fluid hero-bg-3 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-half-cycle.png') }}" alt="">
+    <img class="img-fluid hero-bg-4 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/green-dot.png') }}"  alt="">
+    <img class="img-fluid hero-bg-5 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/blue-half-cycle.png') }}" alt="">
+    <img class="img-fluid hero-bg-6 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-ball-1.png') }}" alt="">
+
+  </div>
+</section>
+<!-- /hero-area -->
+
+<!-- feature -->
+<section class="section feature mb-0 pt-0 pb-0" id="feature">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Awesome Features</h2>
+        
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          <div>
+            <i class="ti-ruler-pencil feature-icon mr-4"></i>
+          </div>
+          <div>
+            <h4>Multi Language Support
+            </h4>
+            <p>View in your preffered language</p>
+          </div>
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          <div>
+            <i class="ti-layout-cta-left feature-icon mr-4"></i>
+          </div>
+          <div>
+            <h4>Offline Doctors 
+            </h4>
+            <p>Get location on maps</p>
+          </div>
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          <div>
+            <i class="ti-split-v-alt feature-icon mr-4"></i>
+          </div>
+          <div>
+            <h4>Health Topics
+            </h4>
+            <p>Read more about diseases</p>
+          </div>
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          <div>
+            <i class="ti-layers-alt feature-icon mr-4"></i>
+          </div>
+          <div>
+            <h4>Personalization</h4>
+            <p>get results instantly</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class="feature-bg-1 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/feature-bg-1.png') }}" alt="bg-shape">
+  <img class="feature-bg-2 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/feature-bg-2.png') }}" alt="bg-shape">
+</section>
+<!-- /feature -->
+
+<!-- Check Now -->
+<section class="section-lg seo pt-5 pb-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="seo-image">
+          <img class="img-fluid" src="{{ url_for('static', filename='assets/images/marketing/marketing.png') }}" alt="form-img">
+        </div>
+      </div>
+      <div class="col-md-5">
+        <h2 class="section-title">Check your skin now</h2>
+        <p>Take a photo and get results instantly.
+        </p>
+        <a href="#" class="btn btn-primary ml-lg-3 primary-shadow">Get Started</a>
+      </div>
+    </div>
+  </div>
+  <!-- background image -->
+  <img class="img-fluid seo-bg" src="{{ url_for('static', filename='assets/images/backgrounds/seo-bg.png') }}" height=447px width=300px alt="seo-bg">
+  <!-- background-shape -->
+  <img class="seo-bg-shape-1 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-ball-1.png') }}" alt="bg-shape">
+  <img class="seo-bg-shape-2 up-down-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-half-cycle.png') }}" alt="bg-shape">
+  <img class="seo-bg-shape-3 left-right-animation" src="{{ url_for('static', filename='assets/images/background-shape/seo-ball-2.png') }}" alt="bg-shape">
+</section>
+<!-- /marketing -->
+<section class="section-lg seo pt-5 pb-2" id="contactus">
+  <div class="container">
+   
+      <div class="col-md-6">
+        <h2 class="section-title pb-0 mb-0">Contact</h2>
+        <hr class="mt-0">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfeZJQFwHlLmQDyWwF7X-oBaaJYCksQWfFDdsII528KOf0cQQ/viewform?embedded=true" width="780" height="843" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+      </div>
+    </div>
+  </div>
+ </section>
+
+<!-- footer -->
+<footer class="footer-section footer pt-2 mt-3 pb-2" style="background-color:rgb(88, 95, 93)"">
+  <div class="container text-center" style="color: aliceblue;">
+          @Vedic2022
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+
+<script src="{{ url_for('static',filename='assets/plugins/jQuery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/slick/slick.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/Venobox/venobox.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/plugins/aos/aos.js') }}"></script>
+
+<!-- Main Script -->
+<script src="{{ url_for('static',filename='assets/js/script.js') }}"></script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
